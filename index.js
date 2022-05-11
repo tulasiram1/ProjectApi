@@ -12,5 +12,5 @@ app.use(compression);
 app.listen(process.env.PORT, () => { console.log(`listening to port number ${process.env.PORT}`); });
 const URL = process.env.DATABASE_URL.replace('<password>', process.env.DATABASE);
 mongoose.connect(URL).then(() => { console.log('connection success'); }).catch((err) => { console.log(err); });
-
+app.get('/', (req, res) => { console.log("Hello"); })
 app.use('/api', controller);
