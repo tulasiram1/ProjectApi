@@ -9,7 +9,7 @@ const BranchME = require('./models/BrachAE');
 
 const insert = async () => {
     try {
-        await mongoose.connect("mongodb://Tulasi:Ramreddy@cluster0-shard-00-00.ollp2.mongodb.net:27017,cluster0-shard-00-01.ollp2.mongodb.net:27017,cluster0-shard-00-02.ollp2.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-e21r91-shard-0&authSource=admin&retryWrites=true&w=majority");
+        await mongoose.connect("");
         console.log('connection success');
         const data = await readXlsxFile('AE.xlsx');
         for (i = 1; i < data.length; i++) {
